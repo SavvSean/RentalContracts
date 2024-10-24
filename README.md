@@ -21,6 +21,7 @@ CREATE TABLE [dbo].[ContractsTable](
 	[Status] [varchar](100) NULL,
 	[Pending] [varchar](100) NOT NULL,
 	[InsertedDate] [datetime] NULL,
+	[TerminationDate] [datetime] NULL,
 	[IsTerminated] [bit] NULL
 ) ON [PRIMARY]
 GO
