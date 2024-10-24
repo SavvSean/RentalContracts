@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50F9C0F-397F-47C4-AC5C-073400A72FDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PrototypeRent</RootNamespace>
+    <AssemblyName>PrototypeRent</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractDBCreate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractDBCreate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContractDBMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractDBMenu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContractDBRenew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractDBRenew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContractDBTerminate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractDBTerminate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContractDBView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractDBView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Chicken.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Chicken.Designer.cs">
+      <DependentUpon>Chicken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreatePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreatePanel.Designer.cs">
+      <DependentUpon>CreatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MenuPanel.Designer.cs">
+      <DependentUpon>MenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RenewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RenewPanel.Designer.cs">
+      <DependentUpon>RenewPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TerminatePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TerminatePanel.Designer.cs">
+      <DependentUpon>TerminatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ViewPanel.Designer.cs">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\Chicken.resx">
+      <DependentUpon>Chicken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CreatePanel.resx">
+      <DependentUpon>CreatePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MenuPanel.resx">
+      <DependentUpon>MenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RenewPanel.resx">
+      <DependentUpon>RenewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TerminatePanel.resx">
+      <DependentUpon>TerminatePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ViewPanel.resx">
+      <DependentUpon>ViewPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ContractDBCreate.xsc">
+      <DependentUpon>ContractDBCreate.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBCreate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractDBCreate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContractDBCreate.xss">
+      <DependentUpon>ContractDBCreate.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBMenu.xsc">
+      <DependentUpon>ContractDBMenu.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBMenu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractDBMenu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContractDBMenu.xss">
+      <DependentUpon>ContractDBMenu.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBRenew.xsc">
+      <DependentUpon>ContractDBRenew.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBRenew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractDBRenew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContractDBRenew.xss">
+      <DependentUpon>ContractDBRenew.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBTerminate.xsc">
+      <DependentUpon>ContractDBTerminate.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBTerminate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractDBTerminate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContractDBTerminate.xss">
+      <DependentUpon>ContractDBTerminate.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBView.xsc">
+      <DependentUpon>ContractDBView.xsd</DependentUpon>
+    </None>
+    <None Include="ContractDBView.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContractDBView.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ContractDBView.xss">
+      <DependentUpon>ContractDBView.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
