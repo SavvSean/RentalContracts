@@ -1,4 +1,4 @@
-Should Execute this to the SQL Management Studio with a new query.
+## Should Execute this to the SQL Management Studio with a new query.
 
 ```
 USE [ContractDB]
